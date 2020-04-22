@@ -1,0 +1,14 @@
+.gitignore
+*.jpg
+*jpeg
+*JPG
+*ipynb
+*.json
+*.csv
+*.idea
+.DS_Store
+/acquire
+/drivers
+/notebooks
+LICENSE.md
+README.md
