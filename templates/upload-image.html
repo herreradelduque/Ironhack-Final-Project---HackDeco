@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Subir imagen del mueble</h1>
+      <hr>
+      <form target="_self" action="/upload-image" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label>jpg, jpeg o png</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="image">
+            <label class="custom-file-label" for="image">'Silla.jpg'</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-dark">Cargar imagen</button>
+
+    </div>
+      </form>
+
+  </div>
+  <p></p>
+  <button type="submit" onclick="window.location.href = 'http://127.0.0.1:3000/search';" class="btn btn-primary btn-sm btn-dark">Siguiente</button>
+
+</div>
+
+
+{% endblock %}
