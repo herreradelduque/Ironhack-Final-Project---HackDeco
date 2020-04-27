@@ -130,10 +130,25 @@ dmypy.json
 .pyre/
 
 #Images
+*.jpg
+*.jpeg
+*.png
 
+#video
+*.mov
+
+#audio
+*.m4u
+
+#presentation
+*.pptx
 
 #folders
 /notebooks
+/static
+/templates
+/presentations
+
+
 .DS_Store
 .idea
-

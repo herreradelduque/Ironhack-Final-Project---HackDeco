@@ -1,9 +1,10 @@
-# Ironhack-Final-Project---FurniTour
+# Ironhack-Final-Project---HackDecó
 
+![Alt text](./static/img/hackdeco.png?raw=true "Title")
 
 # Description 🪑🔎   ➡️   💻 🤖 = 💺 
 
-FurniTour enables the user to get a list of the most visualy similar pieces of furniture available at the main sellers websites, starting from a users image of a piece of furniture.
+HackDecó enables the user to get a list of the most visualy similar pieces of furniture available at the main sellers websites, starting from a users image of a piece of furniture.
 
 This project developes a CNN (Convolutional Neuronal Network), a web scrapping module, an API and a website. 
 
