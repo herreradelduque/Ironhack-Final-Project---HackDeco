@@ -146,7 +146,7 @@ dmypy.json
 #folders
 /notebooks
 /static
-/templates
+/__trash__/templates
 /presentations
 
 

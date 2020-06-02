@@ -80,7 +80,7 @@ def ikea_scrapper():
         soup = BeautifulSoup(page, 'html.parser')
 
         image_list = []
-        for link in soup.find_all('img'):
+        for link in soup.find_all('img class'):
             src = link.get('src')
             if src.startswith('https://www.ikea.com/es/es/images/products/'):  # check src starts with...
                 image_list.append(src)

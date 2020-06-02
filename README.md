@@ -27,18 +27,17 @@ This project developes a CNN (Convolutional Neuronal Network), a web scrapping m
 - Extracted features
 - Visual recomendation (object)
 
-/notebooks:
-      
-- Test notebooks.
-
-/prerequisistes:
+requirements.txt:
 - Required libraries.
 
 app.py:
 - API (Application Programming Interface).
 
-/README.md:
+README.md:
 - Contains the main features needed to get a more comprehensive project.
+
+webapp.py:
+- HackDecó website
 
 # Inputs🗃
 
@@ -49,7 +48,7 @@ app.py:
 
 # Usage ⛏
 
-Users (at FurniTour website):
+Users (at HackDecó website):
 - selects the furniture seller website to analyze
 - selects the type of furniture to search
 - uploads an image of a furniture he/she wants to search, based on visual similarity
@@ -81,7 +80,7 @@ API:
 
 # Output  📬
 
-- The images of the more similar pieces of furniture rendered at FurniTour website.
+- The images of the more similar pieces of furniture rendered at Hackdecó website.
 
 - Furniture's Price
 
