@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Cam Capure{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Pulsa s para captura y q para salir</h1>
+      <hr>
+      <form target="_self" action="/cam-capture" method="POST" enctype="multipart/form-data">
+
+        <button type="submit" class="btn btn-primary btn-sm btn-dark">Capturar imagen</button>
+
+    </div>
+      </form>
+
+  </div>
+  <p></p>
+  <button type="submit" onclick="window.location.href = 'http://127.0.0.1:3000/search';" class="btn btn-primary btn-sm btn-dark">Siguiente</button>
+
+</div>
+
+
+{% endblock %}
