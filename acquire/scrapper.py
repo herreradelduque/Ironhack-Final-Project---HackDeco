@@ -38,7 +38,8 @@ def ikea_scrapper():
     prod_tags_dict = {"Sillas": "Todas las sillas", "Sofás": "Todos los sofás"}
 
     for index, product in enumerate(product_lst):
-        directory = "../data/img_ikea_" + product_lst[index]  # Directory of images
+        directory = "../data/img_ikea_" + \
+            product_lst[index]  # Directory of images
         print(f"Selected product: {product.upper()}")
 
         # Launch driver:
@@ -59,7 +60,8 @@ def ikea_scrapper():
         try:
             count = 0
             while True:
-                continue_link = driver.find_element_by_partial_link_text("Cargar más")
+                continue_link = driver.find_element_by_partial_link_text(
+                    "Cargar más")
                 continue_link.click()
                 time.sleep(1)
                 count += 1
@@ -106,12 +108,14 @@ def ikea_scrapper():
             images_path_list.append(path)
 
         product_names_list = []
-        names = soup.select("div.product-compact__spacer span.product-compact__name")
+        names = soup.select(
+            "div.product-compact__spacer span.product-compact__name")
         for name in names:
             product_names_list.append(name.text)
 
         product_types_list = []
-        types = soup.select("div.product-compact__spacer span.product-compact__type")
+        types = soup.select(
+            "div.product-compact__spacer span.product-compact__type")
         for type in types:
             product_types_list.append(
                 ((type.text).replace("\n", "")).strip().replace("         ", "")

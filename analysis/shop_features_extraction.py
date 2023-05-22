@@ -22,10 +22,12 @@ def features_extraction():
             vgg_model = vgg16.VGG16(weights="imagenet")
             # remove the last layers in order to get features instead of predictions
             feat_extractor = Model(
-                inputs=vgg_model.input, outputs=vgg_model.get_layer("fc2").output
+                inputs=vgg_model.input, outputs=vgg_model.get_layer(
+                    "fc2").output
             )
             # 2. get the images paths
-            files = [imgs_path + x for x in os.listdir(imgs_path) if "jpg" in x]
+            files = [imgs_path +
+                     x for x in os.listdir(imgs_path) if "jpg" in x]
             print("number of images:", len(files))
             # 4. feed all the images into the CNN
             # load all the images and prepare them for feeding into the CNN

@@ -87,7 +87,8 @@ def selections_and_upload_image():
                 return redirect(request.url)
             if allowed_image(image.filename):
                 filename = secure_filename(image.filename)
-                image.save(os.path.join(app.config["IMAGE_UPLOADS"], "img.jpg"))
+                image.save(os.path.join(
+                    app.config["IMAGE_UPLOADS"], "img.jpg"))
                 print("Image saved")
                 return redirect(request.url)
             else:
