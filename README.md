@@ -2,26 +2,26 @@
 
 ![Alt text](./static/img/hackdeco.png?raw=true "Title")
 
-# Description 🪑🔎   ➡️   💻 🤖 = 💺 
+# Description 🪑🔎   ➡️   💻 🤖 = 💺
 
 HackDecó enables the user to get a list of the most visualy similar pieces of furniture available at the main sellers websites, starting from a users image of a piece of furniture.
 
-This project developes a CNN (Convolutional Neuronal Network), a web scrapping module, an API and a website. 
+This project developes a CNN (Convolutional Neuronal Network), a web scrapping module, an API and a website.
 
 # Repo Structure 📂
-/acquire: 
+/acquire:
 - Module: Web scrapping.
- 
-  
+
+
 /analysis:
- 
+
 - Module: Features extraction (from sellers websites).
 
 - Module: Features extraction (from an image of the user's piece furniture).
 
 - Module: Visual recomendation.
- 
- 
+
+
 /data:
 - Images of furnitures
 - Extracted features
@@ -41,7 +41,7 @@ webapp.py:
 
 # Inputs🗃
 
-- Images of furniture sellers websites: 
+- Images of furniture sellers websites:
 
 - User's image of a furniture.
 
@@ -52,7 +52,7 @@ Users (at HackDecó website):
 - selects the furniture seller website to analyze
 - selects the type of furniture to search
 - uploads an image of a furniture he/she wants to search, based on visual similarity
-    
+
 CNN model:
 - converts the user's image into an numpy array
 - applies a convolutional function

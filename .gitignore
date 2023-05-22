@@ -148,7 +148,7 @@ dmypy.json
 /static
 /__trash__/templates
 /presentations
-
+/tests
 
 .DS_Store
 .idea
