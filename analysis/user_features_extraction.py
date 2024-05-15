@@ -16,17 +16,11 @@ def features_extraction_user(feat_extractor):
     # remove the last layers in order to get features instead of predictions
     # feat_extractor = Model(inputs=vgg_model.input, outputs=vgg_model.get_layer("fc2").output)
     # 2. get the user image path
-    files_users = [
-        path_img_user + x
-        for x in os.listdir(path_img_user)
-        if ("jpg" in x) or ("jpeg" in x) or ("JPG" in x)
-    ]
+    files_users = [path_img_user + x for x in os.listdir(path_img_user) if ("jpg" in x) or ("jpeg" in x) or ("JPG" in x)]
     # 3. feed one image into the CNN
     # load an image in PIL format
     print(f"{files_users} try.....!")
-    original_user = load_img(
-        files_users[0], target_size=(imgs_model_width, imgs_model_height)
-    )
+    original_user = load_img(files_users[0], target_size=(imgs_model_width, imgs_model_height))
     # convert the PIL image to a numpy array
     # in PIL - image is in (width, height, channel)
     # in Numpy - image is in (height, width, channel)

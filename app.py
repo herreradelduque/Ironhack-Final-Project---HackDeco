@@ -19,9 +19,7 @@ graph = tf.get_default_graph()
 set_session(sess)
 vgg_model = vgg16.VGG16(weights="imagenet")
 # remove the last layers in order to get features instead of predictions
-feat_extractor = Model(
-    inputs=vgg_model.input, outputs=vgg_model.get_layer("fc2").output
-)
+feat_extractor = Model(inputs=vgg_model.input, outputs=vgg_model.get_layer("fc2").output)
 
 
 @app.route("/", methods=["GET"])
@@ -34,9 +32,12 @@ def home():
 def features_extract():
     # user_search_preferences = {'shop': request.json['shop'], 'furniture': request.json['furniture']}
     # selections = {'shop': request.form['shop'], 'furniture': request.form['furniture']}
-    print(request.get_json())
+    #print("Resquest received:", request.get_json())
+    print("Feature extract...")
     shop = request.json["shop"]
+    print("shop", shop)
     product = request.json["furniture"]
+    print("product", product)
     # shop = request.form["shop"]
     # furniture = request.form["furniture"]
 
@@ -50,7 +51,7 @@ def features_extract():
 
     # we're now loading the JSON file's data into file_data
     # every time a request is made to this endpoint
-    with open(f"data/cos_similarities_{shop}_{product}.json", "r") as jsonfile:
+    with open(f"./data/cos_similarities_{shop}_{product}.json", "r") as jsonfile:
         file_data = json.loads(jsonfile.read())
     # We can then find the data for the requested info and send it back as json
     # return json.dumps(file_data)

@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template, request, session, flash
-from analysis.cam_capture import capture
+#from analysis.cam_capture import capture
 import os
 from werkzeug.utils import secure_filename
 import requests
@@ -60,15 +60,18 @@ def selections():
         # user_pref_json = json.dumps(data)
         # user_pref_json = jsonify(data)
         # user_pref_json = (data)
-        print(data)
+        print(type(data), data)
         print("2----")
+        print("Sending request...")
         r = requests.post("http://127.0.0.1:5000/furnitour", json=data)
+        print("type", type(r))
+        print("r", r)
         similar = r.json()
         print("3-----")
-        print(similar[0])
+        #print(similar[0])
         print(type(data))
         if r.ok:
-            print(r.json()[0]["Buy_url"])
+            #print(r.json()[0]["Buy_url"])
             print("4----")
             return render_template("result.html", similar=similar)
         # r = requests.post('http://127.0.0.1:5000/furnitour')
